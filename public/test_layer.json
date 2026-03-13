@@ -1,0 +1,20 @@
+{
+  "sources": {
+    "bc_hex": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/bq-io/blitz-the-gap/hex_bc_50km.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "hex_layer",
+      "type": "fill",
+      "source": "bc_hex",
+      "source-layer": "50km",
+      "paint": {
+        "fill-color": "#888888",
+        "fill-opacity": 0.5
+      }
+    }
+  ]
+}
