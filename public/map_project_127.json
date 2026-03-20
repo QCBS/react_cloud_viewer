@@ -2,26 +2,26 @@
   "sources": {
     "source": {
       "type": "vector",
-      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/NB_NS_corridor.pmtiles",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/Kaaikop.pmtiles",
       "encoding": "mlt"
     }
   },
   "layers": [
     {
-      "id": "hex_layer",
+      "id": "main_layer",
       "type": "fill",
       "source": "source",
-      "source-layer": "NB_NS_corridor",
+      "source-layer": "Kaaikop",
       "paint": {
         "fill-color": "#99c63d",
         "fill-opacity": 0.5
       }
     }
   ],
-  "bounds": [-66.0, 45.0, -64.0, 47.0],
+  "bounds": [-74.3, 46.13, -74.0, 46.3],
   "legend": [
     {
-      "value": "NB-NS Corridor",
+      "value": "Contour de l'aire protégée en développement",
       "color": "#99c63d"
     }
   ]

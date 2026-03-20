@@ -18,10 +18,10 @@
       }
     }
   ],
-  "bounds": [-66.0, 45.0, -64.0, 47.0],
+  "bounds": [-65.0, 45.0, -64.0, 47.0],
   "legend": [
     {
-      "value": "NB-NS Corridor",
+      "value": "High probability corridor area from multi-species based habitat suitability analysis least cost paths.",
       "color": "#99c63d"
     }
   ]

@@ -9,34 +9,9 @@ import Menus from "./components/Menus";
 const { useEffect, useRef } = React;
 
 function App() {
-  const [COGUrl, setCOGUrl] = React.useState(
-    "https://object-arbutus.cloud.computecanada.ca/bq-io/io/inat_canada_heatmaps/All_density_inat_100m.tif",
-  );
-  const [challenge, setChallenge] = useState("All challenges");
-  const [colorBy, setColorBy] = useState("OBS_total");
-  const challenges = [
-    { name: "All challenges", everywhere: false },
-    { name: "Conservation priorities (MayBAs)", everywhere: false },
-    { name: "Make a splash", everywhere: false },
-    { name: "Trailblazers", everywhere: false },
-    { name: "99 Percent", everywhere: false },
-    { name: "Revisit the past", everywhere: false },
-    { name: "Climate gaps", everywhere: false },
-    { name: "Birders, don't look up!", everywhere: true },
-    { name: "Getting Even", everywhere: true },
-    { name: "More than a Monarch", everywhere: true },
-    { name: "Missing Canadian Species", everywhere: true },
-  ];
-
   return (
     <Router>
-      <Map
-        COGUrl={COGUrl}
-        opacity={100}
-        challenges={challenges}
-        challenge={challenge}
-        colorBy={colorBy}
-      />
+      <Map opacity={100} />
       <ReactTooltip
         effect="solid"
         type="dark"

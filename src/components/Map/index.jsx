@@ -12,14 +12,14 @@ import { useSearchParams } from "react-router-dom";
 import "./map.css";
 
 export default function Map(props) {
-  const { COGUrl, opacity, colorBy } = props;
+  const { opacity } = props;
 
   const [mapp, setMapp] = useState(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
   const layers_json_uri = searchParams.get("layers_json_uri");
-
+  const [valueColors, setValueColors] = useState([]);
   const mapRef = useRef();
   //const colormap = encodeURIComponent(JSON.stringify(amfhot));
   const colormap = "viridis";
@@ -35,11 +35,11 @@ export default function Map(props) {
   }, []);
 
   useEffect(() => {
-    if (COGUrl && !mapp) {
+    if (!mapp) {
       const map = new maplibregl.Map({
         container: "App",
         zoom: 3.5,
-        center: [-120, 58],
+        center: [-75, 58],
         style: {
           version: 8,
           projection: {
@@ -81,9 +81,13 @@ export default function Map(props) {
             });
             sty.layers.forEach((layerDef, layerId) => {
               if (map && !map.getLayer(layerId)) {
-                map.addLayer(layerDef);
+                let lyr = map.addLayer(layerDef);
               }
             });
+            map.fitBounds(sty.bounds);
+            if (sty.legend) {
+              setValueColors(sty.legend);
+            }
           });
       });
 
@@ -103,23 +107,26 @@ export default function Map(props) {
             <>
               <div
                 style={{
-                  fontSize: "20px",
-                  fontWeight: "bold",
+                  fontSize: "10px",
                   paddingTop: "5px",
                   color: "#3f5830",
                 }}
               >
                 <table>
-                  {features[0].properties.map((p) => {
-                    return (
-                      <tr key={p.key}>
-                        <td style={{ fontWeight: "bold", paddingRight: "5px" }}>
-                          {p.key}:
-                        </td>
-                        <td>{p.value}</td>
-                      </tr>
-                    );
-                  })}
+                  {Object.entries(features[0].properties).map(
+                    ([key, value]) => {
+                      return (
+                        <tr key={key}>
+                          <td
+                            style={{ fontWeight: "bold", paddingRight: "5px" }}
+                          >
+                            {key}:
+                          </td>
+                          <td>{value}</td>
+                        </tr>
+                      );
+                    },
+                  )}
                 </table>
               </div>
             </>
@@ -162,10 +169,12 @@ export default function Map(props) {
           pointerEvents: "auto",
           backgroundColor: "white",
           padding: "10px",
-          width: 75,
+          width: 120,
           borderRadius: 5,
         }}
-      ></div>
+      >
+        {BaseLegend(valueColors)}
+      </div>
     </div>
   );
 }

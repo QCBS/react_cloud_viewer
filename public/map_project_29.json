@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "source": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/Cold_hollow_to_canada.pmtiles",
+      "encoding": "mlt"
+    }
+  },
+  "layers": [
+    {
+      "id": "main_layer",
+      "type": "line",
+      "source": "source",
+      "source-layer": "Cold_hollow_to_canada",
+      "paint": {
+        "line-color": "#99c63d",
+        "line-width": 2
+      }
+    }
+  ],
+  "bounds": [-73, 44, -72.5, 45.5],
+  "legend": [
+    {
+      "value": "Cold hollow to canada region",
+      "color": "#99c63d"
+    }
+  ]
+}
