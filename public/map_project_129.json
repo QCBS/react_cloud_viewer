@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "source": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/DLF_plantations.pmtiles",
+      "encoding": "mlt"
+    }
+  },
+  "layers": [
+    {
+      "id": "main_layer",
+      "type": "fill",
+      "source": "source",
+      "source-layer": "DLF_plantations",
+      "paint": {
+        "fill-color": "#99c63d",
+        "fill-opacity": 0.5
+      }
+    }
+  ],
+  "bounds": [-75, 45.6, -70, 48.5],
+  "legend": [
+    {
+      "value": "Coulées qui ont été reboisées dans le cadre du projet jusqu'en novembre 2024.",
+      "color": "#99c63d"
+    }
+  ]
+}
