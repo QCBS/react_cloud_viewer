@@ -1,1 +1,3 @@
+# REACT / MAPLIBRE viewer for cloud optimized files 
+
 This is a generic viewer for Maplibre sources and layers. The sources and layers are specified in a JSON file that is sent to the URL of the viewer for display purposes. Currently used on https://ecologicalconnectivity.com 
