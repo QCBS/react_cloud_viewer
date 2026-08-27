@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "source": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/Berkshire_Linkage.pmtiles",
+      "encoding": "mlt"
+    }
+  },
+  "layers": [
+    {
+      "id": "main_layer",
+      "type": "fill",
+      "source": "source",
+      "source-layer": "Berkshire_Linkage",
+      "paint": {
+        "fill-color": "#99c63d",
+        "fill-opacity": 0.5
+      }
+    }
+  ],
+  "bounds": [-75, 40.5, -71.0, 44],
+  "legend": [
+    {
+      "value": "Green Mountains to Hudson Highlands",
+      "color": "#99c63d"
+    }
+  ]
+}

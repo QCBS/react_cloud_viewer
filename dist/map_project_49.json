@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "source": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/NB_NS_corridor.pmtiles",
+      "encoding": "mlt"
+    }
+  },
+  "layers": [
+    {
+      "id": "hex_layer",
+      "type": "fill",
+      "source": "source",
+      "source-layer": "NB_NS_corridor",
+      "paint": {
+        "fill-color": "#99c63d",
+        "fill-opacity": 0.5
+      }
+    }
+  ],
+  "bounds": [-65.0, 45.0, -64.0, 47.0],
+  "legend": [
+    {
+      "value": "High probability corridor area from multi-species based habitat suitability analysis least cost paths.",
+      "color": "#99c63d"
+    }
+  ]
+}

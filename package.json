@@ -1,5 +1,5 @@
 {
-  "name": "blitz-the-gap-bc-parks-map",
+  "name": "react_cloud_viewer",
   "homepage": "/",
   "version": "0.1.0",
   "private": true,
@@ -52,7 +52,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "vite build && gh-pages -d dist",
+    "deploy": "vite build && scp -P 535 -r dist/* ecologicalconnectivity@ecologicalconnectivity.com:/var/www/ecologicalconnectivity.com/web/map_project_viewer/",
     "test": "jest",
     "lint": "eslint './src/**/*.{d.ts,ts,tsx}'",
     "prepare": "husky install"

@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "source": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/NEAFWA_boundary3.pmtiles",
+      "encoding": "mlt"
+    }
+  },
+  "layers": [
+    {
+      "id": "main_layer",
+      "type": "fill",
+      "source": "source",
+      "source-layer": "NEAFWA_boundary3",
+      "paint": {
+        "fill-color": "#99c63d",
+        "fill-opacity": 0.5
+      }
+    }
+  ],
+  "bounds": [-98, 32, -49, 64],
+  "legend": [
+    {
+      "value": "Boundary of the Northeast Association of Fish and Wildlife Agencies (NEAFWA)",
+      "color": "#99c63d"
+    }
+  ]
+}

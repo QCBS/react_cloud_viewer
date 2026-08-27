@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "source": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/Connectivite_ecologique_Mauricie.pmtiles",
+      "encoding": "mlt"
+    }
+  },
+  "layers": [
+    {
+      "id": "main_layer",
+      "type": "fill",
+      "source": "source",
+      "source-layer": "Connectivite_ecologique_Mauricie",
+      "paint": {
+        "fill-color": "#99c63d",
+        "fill-opacity": 0.5
+      }
+    }
+  ],
+  "bounds": [-74, 45.5, -72.6, 46.5],
+  "legend": [
+    {
+      "value": "Zone d'étude dans les basses-terres de Lanaudière",
+      "color": "#99c63d"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "source": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/Mont-Saint-Hilaire.pmtiles",
+      "encoding": "mlt"
+    }
+  },
+  "layers": [
+    {
+      "id": "main_layer",
+      "type": "fill",
+      "source": "source",
+      "source-layer": "Mont-Saint-Hilaire",
+      "paint": {
+        "fill-color": "#99c63d",
+        "fill-opacity": 0.5
+      }
+    }
+  ],
+  "bounds": [-72.3, 45.3, -72.0, 45.6],
+  "legend": [
+    {
+      "value": "Agrandissement proposé",
+      "color": "#99c63d"
+    }
+  ]
+}

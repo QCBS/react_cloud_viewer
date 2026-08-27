@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "source": {
+      "type": "vector",
+      "url": "pmtiles://https://object-arbutus.cloud.computecanada.ca/qcbs/connectivity/Corridor_Vallee_Yamaska.pmtiles",
+      "encoding": "mlt"
+    }
+  },
+  "layers": [
+    {
+      "id": "main_layer",
+      "type": "fill",
+      "source": "source",
+      "source-layer": "Corridor_Vallee_Yamaska",
+      "paint": {
+        "fill-color": "#99c63d",
+        "fill-opacity": 0.5
+      }
+    }
+  ],
+  "bounds": [-73.1, 45.4, -72.6, 46.15],
+  "legend": [
+    {
+      "value": "Territoire d'intervention prioritaire du projet Corridor Vallée de la Yamaska; nos actions porteront sur l'ensemble du bassin versant, mais ce territoire prioritaire rassemble les secteurs ayant les plus grands besoins de reconnexion.",
+      "color": "#99c63d"
+    }
+  ]
+}
